@@ -1,0 +1,255 @@
+html {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    color:  #FFE664;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    display: grid;
+    background-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFE664;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+@media screen and (min-width: 450px) {
+    body {
+        display: grid;
+        background-color: black;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #FFE664;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: repeat(12, 1fr);
+        justify-self: stretch;
+        align-self: stretch;
+    }
+}
+
+
+header {
+    grid-area: 1 / 1 / span 1 / span 1; 
+    display: block;
+}
+
+@media screen and (min-width: 450px) {
+    header {
+        grid-area: 1 / 1 / 13 / 4; 
+        border-right: #FFE664 solid 1px;
+    }
+}
+
+
+header h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header p {
+    display: none;
+}
+
+@media screen and (min-width: 450px) {
+    header p {
+        display: block;
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-weight: lighter;
+        font-size: 90%;
+    }
+}
+
+header nav {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    justify-items: stretch;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+
+
+
+.copyright {
+    font-size: 50%;
+}
+
+.bio_image {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100% 100%;
+    background-image: url(./media/images/biopic_small.jpg);
+    background-clip: border-box;
+    background-position-x: center;
+    background-position-y: center;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+a {
+    background-color: black;
+    border-bottom: solid 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: #FFE664;
+    min-height: 2rem;
+    max-height: 3rem;
+    padding-top: 0.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #FFE664;
+    color: black;
+}
+
+a:visited {
+    color: #d8d2b2;
+    background-color: black;
+    text-decoration: none;
+    border-color: #FFE664;
+}
+
+a:visited:hover {
+    background-color: #FFE664;
+    color: black;
+}
+
+main {
+    grid-area: 2 / 1 / 13 / 2; 
+    display: block;
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    max-height: 706;
+    font-size: 85%;
+    text-align: left;
+    line-height: 0.85rem;
+}
+
+@media screen and (min-width: 450px) {
+    main {
+        grid-area: 1 / 4 / 12 / 13; 
+        display: block;
+        /* overflow-y: scroll;
+        overflow-x: hidden; */
+        font-size: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        line-height: 1rem;
+    }
+}
+
+#resume_anchors {
+    display: none;
+}
+
+@media screen and (min-width: 450px) {
+    #resume_anchors {
+        display: inline;
+        font-size: 80%;
+        text-align: left;
+    }
+}
+
+
+main ul li {
+    line-height: 1.4rem;
+    word-spacing: 0.2rem;
+}
+
+main hr {
+    border-style: solid;
+    border-width: 1 px;
+    margin-top: 2rem;
+}
+
+main ul a {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+
+
+#music ul {
+    list-style-type: none;
+    padding-top: 1rem;
+}
+
+#music ul li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+#music ul li a {
+    max-height: 1rem;
+}
+
+#contact {
+    margin-bottom: 1rem;
+}
+
+#contact address {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#contact address a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#contact address a img {
+    max-height: 2rem;
+    max-width: 2rem;
+}
+
+#ci:hover {
+    content: url(./media/images/icon\ copy.svg);
+}
+
+#ci1:hover {
+    content: url(./media/images/icon-1\ copy.svg);
+}
+
+#ci2:hover {
+    content: url(./media/images/icon-2\ copy.svg);
+}
+
+#ci3:hover {
+    content: url(./media/images/icon-3\ copy.svg);
+}
+
+#ci4:hover {
+    content: url(./media/images/icon-4\ copy.svg);
+}
+
+#ci5:hover {
+    content: url(./media/images/icon-5\ copy.svg);
+}
+
